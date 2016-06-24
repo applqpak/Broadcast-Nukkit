@@ -22,7 +22,7 @@ public class Main extends PluginBase
       if(strArray[i].trim() != "")
       {
 
-        ret += (i = strArray.length - 1) ? strArray[i] : strArray[i] + glue;
+        ret += (i == strArray.length - 1) ? strArray[i] : strArray[i] + glue;
 
       }
 
