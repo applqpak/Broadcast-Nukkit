@@ -6,8 +6,31 @@ import cn.nukkit.command.CommandSender;
 import cn.nukkit.command.Command;
 import cn.nukkit.Player;
 
+import java.lang.*;
+
 public class Main extends PluginBase
 {
+
+  public String implode(String glue, String[] strArray)
+  {
+
+    String ret = "";
+
+    for(int i = 0; i < strArray.length; i++)
+    {
+
+      if(strArray[i].trim() != "")
+      {
+
+        ret += (i = strArray.length - 1) ? strArray[i] : strArray[i] + glue;
+
+      }
+
+    }
+
+    return ret;
+
+  }
 
   @Override
 
@@ -37,7 +60,7 @@ public class Main extends PluginBase
         else
         {
 
-          String message = args[0];
+          String message = this.implode(" ", args);
 
           this.getServer().broadcastMessage(message);
 
