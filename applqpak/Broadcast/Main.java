@@ -51,7 +51,7 @@ public class Main extends PluginBase
 
       case "broadcast":
 
-        if(args[0] == null)
+        if(args.length == 0)
         {
 
           sender.sendMessage(TextFormat.RED + "Invalid usage. Usage: /broadcast < message >");
